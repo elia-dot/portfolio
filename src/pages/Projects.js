@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import styled from "styled-components";
 
 import { projects } from "../data/project-data";
@@ -31,7 +32,15 @@ const Projects = () => {
   <Title>My latest projects</Title>
     <ProjectsContainer>
       {projects.map((project, i) => (
-        <Project project={project} key={i} />
+        <ScrollAnimation
+        animateIn="animate__fadeIn"
+        animateOut="animate__fadeOut"
+        animateOnce
+        key={i}
+        duration={0.7}
+      >
+        <Project project={project} />
+      </ScrollAnimation>
       ))}
     </ProjectsContainer>
     <SubTitle>That's it for now!</SubTitle>

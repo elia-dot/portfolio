@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
+import "animate.css/animate.min.css";
 
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";

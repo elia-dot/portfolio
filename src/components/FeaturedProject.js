@@ -3,12 +3,14 @@ import styled from "styled-components";
 import { AiFillGithub } from "react-icons/ai";
 import { VscLinkExternal } from "react-icons/vsc";
 
+
 const ProjectContainer = styled.div`
   padding: 1em;
   border-radius: 1em;
   display: flex;
   gap: 1em;
   margin-bottom: 2em;
+  transition: all 1s;
   box-shadow: 0px 0px 10px 0px #64ffda;
   @media (max-width: 950px) {
     flex-direction: column-reverse;

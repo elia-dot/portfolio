@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import { projects } from "../data/project-data";
 import FeaturedProject from "../components/FeaturedProject";
@@ -82,10 +83,10 @@ const SubTitle = styled.h2`
 `;
 
 const SpanLink = styled(Link)`
-color: #64ffda;
-font-size: 1.2em;
-text-decoration: none;
-`
+  color: #64ffda;
+  font-size: 1.2em;
+  text-decoration: none;
+`;
 
 const Home = () => {
   const filteredProjects = projects.filter(
@@ -98,7 +99,8 @@ const Home = () => {
         <HomeTitle>Elia Cohen.</HomeTitle>
         <HomeSubTitle>a father, husband and programer</HomeSubTitle>
         <HomeText>
-          I'm a web developer, mostly focused on the front-end, using modern technologies. 
+          I'm a web developer, mostly focused on the front-end, using modern
+          technologies.
         </HomeText>
       </TitleContainer>
       <Container>
@@ -114,7 +116,14 @@ const Home = () => {
       <Container>
         <SubTitle>Projects iv'e worked on recently :</SubTitle>
         {filteredProjects.map((project, i) => (
-          <FeaturedProject project={project} key={i} />
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animateOut="animate__fadeOut"
+            key={i}
+            duration={0.7}
+          >
+            <FeaturedProject project={project} />
+          </ScrollAnimation>
         ))}
       </Container>
       <DivderContainer>
@@ -122,9 +131,12 @@ const Home = () => {
         <Divider />
         <Dot />
       </DivderContainer>
-      <Container style = {{textAlign: 'center'}}>
+      <Container style={{ textAlign: "center" }}>
         <SubTitle>Like what you see?</SubTitle>
-        <HomeText>Click <SpanLink to = '/projects'>here</SpanLink> to see more of that stuff</HomeText>
+        <HomeText>
+          Click <SpanLink to="/projects">here</SpanLink> to see more of that
+          stuff
+        </HomeText>
       </Container>
     </HomeContainer>
   );

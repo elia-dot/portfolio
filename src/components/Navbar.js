@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
+import {slideInRight } from "react-animations";
 
 import { navbarLinks } from "../data/nav-data";
 import useWidth from "../hooks/useWidth";
+
 
 const Nav = styled.div`
   display: flex;
@@ -23,7 +25,7 @@ const NavLinks = styled.div`
 const NavLinkWrapper = styled.div`
   padding: 0em 1em;
   font-size: 1.2em;
-  @media (max-width: 950px){
+  @media (max-width: 950px) {
     padding: 0.8em 0;
   }
 `;
@@ -41,6 +43,9 @@ const MenuWraper = styled.div`
   align-items: center;
   cursor: pointer;
 `;
+
+const slideAnimation = keyframes`${slideInRight}`
+
 const NavMobile = styled.div`
   position: fixed;
   top: 5em;
@@ -51,7 +56,9 @@ const NavMobile = styled.div`
   flex-direction: column;
   align-items: center;
   background: #112240;
+  animation: 0.6s ${slideAnimation}
 `;
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -62,7 +69,9 @@ const Navbar = () => {
   };
   return (
     <Nav>
-      <Link to = "/"><img src="./images/logo.png" alt="logo" /></Link>
+      <Link to="/">
+        <img src="./images/logo.png" alt="logo" />
+      </Link>
       <NavLinks>
         {width >= 950 ? (
           navbarLinks.map((link) => {

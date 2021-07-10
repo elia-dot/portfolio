@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
+import { RiPhoneFill } from "react-icons/ri";
+
 
 const FooterContainer = styled.section`
   background: rgba(0, 0, 0, 0.3);
@@ -97,6 +99,13 @@ const Footer = () => {
               rel="noreferrer"
             >
               <AiFillLinkedin />
+            </a>
+          </IconWraper>
+          <IconWraper>
+            <a
+              href="tel:0523954305"              
+            >
+              <RiPhoneFill />
             </a>
           </IconWraper>
         </IconsContainer>
