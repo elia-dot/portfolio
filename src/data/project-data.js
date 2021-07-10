@@ -75,4 +75,13 @@ export const projects = [
     ghLink: "https://github.com/elia-dot/mac-shop",
     webLink: "https://mac-shop.netlify.app/",
   },
+  {
+    id: 8,
+    name: "Portfolio",
+    techs: ["React", "Atyled components"],
+    featured: false,
+    description: `This beautiful looking website :)`,
+    ghLink: "https://github.com/elia-dot/portfolio",
+    webLink: "www.eliacohen.dev",
+  },
 ];
