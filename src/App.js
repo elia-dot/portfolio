@@ -1,10 +1,39 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
+
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar";
+import { GlobalStyles } from "./components/GlobalStyles";
+import Footer from "./components/Footer";
+
+const Main = styled.section`
+  padding: 2em;
+  width: 80%;
+  margin: 0 auto;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    padding: 0.5em;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <Router>
+      <Main>
+        <GlobalStyles />
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/contact" component={Contact} />
+        </Switch>
+      </Main>
+      <Footer />
+    </Router>
   );
 }
 
