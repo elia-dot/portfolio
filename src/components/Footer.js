@@ -57,11 +57,14 @@ const IconWraper = styled.div`
   width: 50px;
   height: 50px;
   font-size: 1.6em;
-  padding-top: 0.3em;
   border-radius: 50%;
   background-color: #64ffda;
   a {
     color: #112240;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
   }
   &:hover{
       background: #33ffcf;
@@ -106,6 +109,15 @@ const Footer = () => {
               href="tel:0523954305"              
             >
               <RiPhoneFill />
+            </a>
+          </IconWraper>
+          <IconWraper>
+            <a
+              href="/images/Elia_Cohen_CV.pdf" 
+              target="_blank"
+              rel="noreferrer"            
+            >
+              CV
             </a>
           </IconWraper>
         </IconsContainer>

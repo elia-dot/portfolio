@@ -5,6 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import { projects } from "../data/project-data";
 import FeaturedProject from "../components/FeaturedProject";
+import Skills from "../components/Skills";
 
 const HomeContainer = styled.section`
   padding: 1em;
@@ -50,7 +51,7 @@ const LinkButton = styled.button`
 
 const Container = styled.div`
   width: 80%;
-  margin: 0em auto;
+  margin: 3em auto;
   @media (max-width: 950px) {
     width: 100%;
   }
@@ -61,7 +62,7 @@ const DivderContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 40%;
-  margin: 4em auto;
+  margin: 2em auto;
 `;
 
 const Divider = styled.div`
@@ -78,8 +79,8 @@ const Dot = styled.div`
 
 const SubTitle = styled.h2`
   color: #cce2ff;
-  font-size: 1.2em;
-  margin-bottom: 1em;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
 `;
 
 const SpanLink = styled(Link)`
@@ -126,17 +127,21 @@ const Home = () => {
           </ScrollAnimation>
         ))}
       </Container>
-      <DivderContainer>
-        <Dot />
-        <Divider />
-        <Dot />
-      </DivderContainer>
       <Container style={{ textAlign: "center" }}>
         <SubTitle>Like what you see?</SubTitle>
         <HomeText>
           Click <SpanLink to="/projects">here</SpanLink> to see more of that
           stuff
         </HomeText>
+      </Container>
+      <DivderContainer>
+        <Dot />
+        <Divider />
+        <Dot />
+      </DivderContainer>
+      <Container>
+      <SubTitle>Languages And Technologies: </SubTitle>
+      <Skills/>
       </Container>
     </HomeContainer>
   );
