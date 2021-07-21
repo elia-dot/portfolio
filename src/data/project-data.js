@@ -78,7 +78,7 @@ export const projects = [
   {
     id: 8,
     name: "expense-tracker",
-    techs: ["React", "NodeJS", "MongoDB", "express"],
+    techs: ["NodeJS", "MongoDB", "express", "React"],
     featured: false,
     description: "App i built for me and my wife to track our monthly expenses",
     ghLink: "https://github.com/elia-dot/expense-tracker-server",

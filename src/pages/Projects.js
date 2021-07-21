@@ -37,7 +37,7 @@ const Projects = () => {
         animateOut="animate__fadeOut"
         animateOnce
         key={i}
-        duration={0.7}
+        duration={0.6}
       >
         <Project project={project} />
       </ScrollAnimation>
