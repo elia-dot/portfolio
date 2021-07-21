@@ -75,4 +75,13 @@ export const projects = [
     ghLink: "https://github.com/elia-dot/mac-shop",
     webLink: "https://mac-shop.netlify.app/",
   },
+  {
+    id: 8,
+    name: "expense-tracker",
+    techs: ["React", "NodeJS", "MongoDB", "express"],
+    featured: false,
+    description: "App i built for me and my wife to track our monthly expenses",
+    ghLink: "https://github.com/elia-dot/expense-tracker-server",
+    webLink: "https://condescending-goldberg-e37646.netlify.app/",
+  },
 ];
