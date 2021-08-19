@@ -14,7 +14,7 @@ export const projects = [
     id: 2,
     name: 'Moments',
     photo: '/images/moments.png',
-    techs: ['React', 'NodeJS', 'MongoDB', 'Express', 'Redux'],
+    techs: ['React', 'NodeJS', 'MongoDB', 'Redux'],
     featured: true,
     description:
       "Ever had a cool moment in a game, no one saw that, and you want everyone will see it? I'm sure you do. With this app you can. Just create an account, upload your videos, and show the world what you've made of! ",
