@@ -70,7 +70,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Link to="/">
-        <img src="./images/logo.png" alt="logo" />
+        <img src="./images/logo-2.png" alt="logo" />
       </Link>
       <NavLinks>
         {width >= 950 ? (
