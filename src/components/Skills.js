@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { RiHtml5Line } from "react-icons/ri";
+import React from 'react';
+import styled from 'styled-components';
+import { RiHtml5Line } from 'react-icons/ri';
 import {
   SiCss3,
   SiJavascript,
@@ -8,11 +8,9 @@ import {
   SiNodeDotJs,
   SiFirebase,
   SiCsharp,
-  SiTypescript,
-  SiFlutter
-} from "react-icons/si";
-import { GrGraphQl } from "react-icons/gr";
-import { DiMsqlServer, DiMongodb } from "react-icons/di";
+} from 'react-icons/si';
+import { GrGraphQl } from 'react-icons/gr';
+import { DiMsqlServer, DiMongodb } from 'react-icons/di';
 
 const SkillsContainer = styled.div``;
 
@@ -67,7 +65,7 @@ const GreenBox = styled.div`
   place-items: center;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0.2em;
     height: 100%;
@@ -91,7 +89,7 @@ const OrangeBox = styled.div`
   place-items: center;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0.2em;
     height: 100%;
@@ -111,11 +109,11 @@ const Skills = () => {
     <SkillsContainer>
       <List>
         <div>
-          <GreenArrow>➤</GreenArrow>{" "}
+          <GreenArrow>➤</GreenArrow>{' '}
           <ListItem>Language/Tech i'm comfortable with</ListItem>
         </div>
         <div>
-          <OrangeArrow>➤</OrangeArrow>{" "}
+          <OrangeArrow>➤</OrangeArrow>{' '}
           <ListItem>Language/Tech I know and used</ListItem>
         </div>
       </List>
@@ -135,25 +133,21 @@ const Skills = () => {
           </GreenBox>
           <GreenBox>
             <SiReact />
-            <SkillText>React</SkillText>
-          </GreenBox>
-          <GreenBox>
-            <SiFlutter />
-            <SkillText>Flutter</SkillText>
+            <SkillText>REACT</SkillText>
           </GreenBox>
         </Row>
         <Row>
           <OrangeBox>
             <SiNodeDotJs />
-            <SkillText>NodeJS</SkillText>
+            <SkillText>NODEJS</SkillText>
           </OrangeBox>
           <OrangeBox>
             <GrGraphQl />
-            <SkillText>GraphQL</SkillText>
+            <SkillText>GRAPHQL</SkillText>
           </OrangeBox>
           <OrangeBox>
             <SiFirebase />
-            <SkillText>Firebase</SkillText>
+            <SkillText>FIREBASE</SkillText>
           </OrangeBox>
           <OrangeBox>
             <SiCsharp />
@@ -165,11 +159,7 @@ const Skills = () => {
           </OrangeBox>
           <OrangeBox>
             <DiMongodb />
-            <SkillText>MongoDB</SkillText>
-          </OrangeBox>
-          <OrangeBox>
-            <SiTypescript />
-            <SkillText>TypeScript</SkillText>
+            <SkillText>MONGODB</SkillText>
           </OrangeBox>
         </Row>
       </SkillsListContainer>
