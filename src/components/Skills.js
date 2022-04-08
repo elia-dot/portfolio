@@ -8,6 +8,8 @@ import {
   SiNodeDotJs,
   SiFirebase,
   SiCsharp,
+  SiTypescript,
+  SiFlutter
 } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
 import { DiMsqlServer, DiMongodb } from "react-icons/di";
@@ -133,21 +135,25 @@ const Skills = () => {
           </GreenBox>
           <GreenBox>
             <SiReact />
-            <SkillText>REACT</SkillText>
+            <SkillText>React</SkillText>
+          </GreenBox>
+          <GreenBox>
+            <SiFlutter />
+            <SkillText>Flutter</SkillText>
           </GreenBox>
         </Row>
         <Row>
           <OrangeBox>
             <SiNodeDotJs />
-            <SkillText>NODEJS</SkillText>
+            <SkillText>NodeJS</SkillText>
           </OrangeBox>
           <OrangeBox>
             <GrGraphQl />
-            <SkillText>GRAPHQL</SkillText>
+            <SkillText>GraphQL</SkillText>
           </OrangeBox>
           <OrangeBox>
             <SiFirebase />
-            <SkillText>FIREBASE</SkillText>
+            <SkillText>Firebase</SkillText>
           </OrangeBox>
           <OrangeBox>
             <SiCsharp />
@@ -159,7 +165,11 @@ const Skills = () => {
           </OrangeBox>
           <OrangeBox>
             <DiMongodb />
-            <SkillText>MONGODB</SkillText>
+            <SkillText>MongoDB</SkillText>
+          </OrangeBox>
+          <OrangeBox>
+            <SiTypescript />
+            <SkillText>TypeScript</SkillText>
           </OrangeBox>
         </Row>
       </SkillsListContainer>
