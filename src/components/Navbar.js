@@ -33,8 +33,10 @@ const LinkText = styled(Link)`
   padding: 0em 1em 0.2em 1em;
   color: #e6f1ff;
   text-decoration: none;
+  transition: all 0.2s linear;
   &:hover {
     border-bottom: 3.5px solid #64ffda;
+    color: #64ffda;
   }
 `;
 const MenuWraper = styled.div`
