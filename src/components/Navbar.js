@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
-import { NavLink as Link } from "react-router-dom";
-import { AiOutlineMenuFold } from "react-icons/ai";
-import { AiOutlineMenuUnfold } from "react-icons/ai";
-import {slideInRight } from "react-animations";
+import React, { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { NavLink as Link } from 'react-router-dom';
+import { AiOutlineMenuFold } from 'react-icons/ai';
+import { AiOutlineMenuUnfold } from 'react-icons/ai';
+import { slideInRight } from 'react-animations';
 
-import { navbarLinks } from "../data/nav-data";
-import useWidth from "../hooks/useWidth";
-
+import { navbarLinks } from '../data/nav-data';
+import useWidth from '../hooks/useWidth';
 
 const Nav = styled.div`
   display: flex;
@@ -46,7 +45,7 @@ const MenuWraper = styled.div`
   cursor: pointer;
 `;
 
-const slideAnimation = keyframes`${slideInRight}`
+const slideAnimation = keyframes`${slideInRight}`;
 
 const NavMobile = styled.div`
   position: fixed;
@@ -58,9 +57,8 @@ const NavMobile = styled.div`
   flex-direction: column;
   align-items: center;
   background: #112240;
-  animation: 0.6s ${slideAnimation}
+  animation: 0.6s ${slideAnimation};
 `;
-
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -74,20 +72,24 @@ const Navbar = () => {
       <Link to="/">
         <img src="./images/logo-2.png" alt="logo" />
       </Link>
+
       <NavLinks>
         {width >= 950 ? (
           navbarLinks.map((link) => {
             return (
               <NavLinkWrapper key={link.name}>
-                {"<"}
+                {'<'}
                 <LinkText
                   exact
                   to={link.to}
-                  activeStyle={{ borderBottom: "3px solid #64ffda" }}
+                  activeStyle={{
+                    borderBottom: '3px solid #64ffda',
+                    color: '#64ffda',
+                  }}
                 >
                   {link.name}
                 </LinkText>
-                {"/>"}
+                {'/>'}
               </NavLinkWrapper>
             );
           })
@@ -106,11 +108,11 @@ const Navbar = () => {
           {navbarLinks.map((link) => {
             return (
               <NavLinkWrapper key={link.name}>
-                {"<"}
+                {'<'}
                 <LinkText onClick={handleOpen} exact to={link.to}>
                   {link.name}
                 </LinkText>
-                {"/>"}
+                {'/>'}
               </NavLinkWrapper>
             );
           })}

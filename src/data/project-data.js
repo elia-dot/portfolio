@@ -1,14 +1,14 @@
 export const projects = [
-  {
+   {
     id: 1,
-    name: 'Netflix-clone',
-    photo: '/images/netflix-clone.png',
-    techs: ['React', 'Firebase', 'Styled components'],
+    name: 'SavinGoals',
+    photo: '/images/savingoals.png',
+    techs: ['React-native', 'NodeJS', 'MongoDB', 'i18n',],
     featured: true,
     description:
-      "We all love Netflix, don't we? So I clone it! using React compouned components and styled components for the front, and firebase to the backend.",
-    ghLink: 'https://github.com/elia-dot/netflix-clone',
-    webLink: 'https://netflixlike.netlify.app/',
+      "Virtual banking and chore managments app for kids. the app is designed to help kids and their parents track allowance, chores, and other financial transactions ",
+    ghLink: 'https://github.com/elia-dot/savings-client',
+    webLink: 'https://github.com/elia-dot/savings-backend',
   },
   {
     id: 2,

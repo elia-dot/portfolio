@@ -42,7 +42,6 @@ const LinkButton = styled.button`
   margin-top: 2em;
   cursor: pointer;
   font-size: 1.1em;
-  transition: all 0.7s linear;
   text-decoration: none;
   &:hover {
     background: rgba(0, 0, 0, 0.3);
