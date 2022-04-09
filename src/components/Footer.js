@@ -113,7 +113,7 @@ const Footer = () => {
           </IconWraper>
           <IconWraper>
             <a
-              href="/images/CV_Elia_Cohen.pdf" 
+              href="/images/Elia_Cohen_CV.pdf" 
               target="_blank"
               rel="noreferrer"            
             >
