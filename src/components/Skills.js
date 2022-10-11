@@ -6,7 +6,6 @@ import {
   SiJavascript,
   SiReact,
   SiNodeDotJs,
-  SiFirebase,
   SiCsharp,
   SiTypescript,
   SiFlutter,
@@ -141,19 +140,15 @@ const Skills = () => {
             <SiFlutter />
             <SkillText>Flutter</SkillText>
           </GreenBox>
+          <GreenBox>
+            <SiNodeDotJs />
+            <SkillText>NodeJS</SkillText>
+          </GreenBox>
         </Row>
         <Row>
           <OrangeBox>
-            <SiNodeDotJs />
-            <SkillText>NodeJS</SkillText>
-          </OrangeBox>
-          <OrangeBox>
             <GrGraphQl />
             <SkillText>GtaphQL</SkillText>
-          </OrangeBox>
-          <OrangeBox>
-            <SiFirebase />
-            <SkillText>Firebase</SkillText>
           </OrangeBox>
           <OrangeBox>
             <SiCsharp />

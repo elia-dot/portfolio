@@ -1,9 +1,11 @@
-import React from "react";
-import ScrollAnimation from "react-animate-on-scroll";
-import styled from "styled-components";
+import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import styled from 'styled-components';
 
-import { projects } from "../data/project-data";
-import Project from "../components/Project";
+import { projects } from '../data/project-data';
+import Project from '../components/Project';
+
+const PageContainer = styled.div``;
 
 const ProjectsContainer = styled.section`
   margin: 2em auto;
@@ -28,23 +30,24 @@ const SubTitle = styled.h2`
 `;
 
 const Projects = () => {
-  return (<>
-  <Title>My latest projects</Title>
-    <ProjectsContainer>
-      {projects.map((project, i) => (
-        <ScrollAnimation
-        animateIn="animate__fadeIn"
-        animateOut="animate__fadeOut"
-        animateOnce
-        key={i}
-        duration={0.6}
-      >
-        <Project project={project} />
-      </ScrollAnimation>
-      ))}
-    </ProjectsContainer>
-    <SubTitle>That's it for now!</SubTitle>
-    </>
+  return (
+    <PageContainer>
+      <Title>My latest projects</Title>
+      <ProjectsContainer>
+        {projects.map((project, i) => (
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animateOut="animate__fadeOut"
+            animateOnce
+            key={i}
+            duration={0.6}
+          >
+            <Project project={project} />
+          </ScrollAnimation>
+        ))}
+      </ProjectsContainer>
+      <SubTitle>That's it for now!</SubTitle>
+    </PageContainer>
   );
 };
 

@@ -7,7 +7,7 @@ import emailjs from "emailjs-com";
 import SuccessModal from "../components/SuccessModal";
 emailjs.init("user_Gn1THNvOz5h6jUkC3p6bS");
 
-
+const PageContainer = styled.div``
 
 const ContactContainer = styled.section`
   width: 100%;
@@ -138,7 +138,7 @@ const Contact = () => {
       }, 4000)
   };
   return (
-    <>
+    <PageContainer>
     {modalOpen && <SuccessModal/>}
       <TextContainer>
         <ContactTitle>Contact me</ContactTitle>
@@ -198,7 +198,7 @@ const Contact = () => {
           </IconContainer>
         </FormContainer>
       </ContactContainer>
-    </>
+    </PageContainer>
   );
 };
 

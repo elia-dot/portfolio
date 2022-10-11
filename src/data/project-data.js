@@ -30,7 +30,7 @@ export const projects = [
     description:
       'A complete api built with nodeJS, espress and mongoDB, payments with stripe api, and server side rendered website using pug (currently not responsive).',
     ghLink: 'https://github.com/elia-dot/natours',
-    webLink: 'https://natours-elia-dot.herokuapp.com/',
+    webLink: 'https://natours-c5f4.onrender.com/',
   },
   {
     id: 4,
