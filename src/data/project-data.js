@@ -82,7 +82,7 @@ export const projects = [
     techs: ['nestJS', 'TypeScript', 'Flutter'],
     featured: true,
     description:
-      'App i built for me and my wife to track our monthly expenses, categorise them, set monthly budget and more.',
+      'App i built for me and my wife to track our monthly expenses, categorise them, set monthly budget and more. available on Apple ang Google stores.',
     ghLink: 'https://github.com/elia-dot/expenses-nest',
     webLink: 'https://github.com/elia-dot/expense-tracker-app',
   },
