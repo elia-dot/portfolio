@@ -70,9 +70,9 @@ const Loader = ({ setFinishedAnimation }) => {
     if (borderLength === 100) {
       const interval = setInterval(() => {
         if (imageSize <= 250) {
-          setImageSize((imageSize) => imageSize + 2);
+          setImageSize((imageSize) => imageSize + 4);
         }
-      }, 2);
+      }, 1);
 
       return () => clearInterval(interval);
     }
@@ -82,16 +82,16 @@ const Loader = ({ setFinishedAnimation }) => {
     if (borderLength === 100) {
       const opacityInterval = setInterval(() => {
         if (loaderOpacity >= 0) {
-          setLoaderOpacity((loaderOpacity) => loaderOpacity - 0.01);
+          setLoaderOpacity((loaderOpacity) => loaderOpacity - 0.02);
         }
       }, 5);
       return () => clearInterval(opacityInterval);
     }
   }, [borderLength, loaderOpacity]);
 
-    React.useEffect(() => {
-      if (loaderOpacity <= 0) setFinishedAnimation(true);
-    }, [loaderOpacity, setFinishedAnimation]);
+  React.useEffect(() => {
+    if (loaderOpacity <= 0) setFinishedAnimation(true);
+  }, [loaderOpacity, setFinishedAnimation]);
 
   return (
     <Container

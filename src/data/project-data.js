@@ -1,12 +1,12 @@
 export const projects = [
-   {
+  {
     id: 1,
     name: 'SavinGoals',
     photo: '/images/savingoals.png',
-    techs: ['React-native', 'NodeJS', 'MongoDB', 'i18n',],
+    techs: ['React-native', 'NodeJS', 'MongoDB', 'i18n'],
     featured: true,
     description:
-      "Virtual banking and chore managments app for kids. the app is designed to help kids and their parents track allowance, chores, and other financial transactions ",
+      'Virtual banking and chore managments app for kids. the app is designed to help kids and their parents track allowance, chores, and other financial transactions ',
     ghLink: 'https://github.com/elia-dot/savings-client',
     webLink: 'https://github.com/elia-dot/savings-backend',
   },
@@ -37,7 +37,7 @@ export const projects = [
     name: 'Countries',
     photo: '/images/countries.png',
     techs: ['React', 'Styled components'],
-    featured: true,
+    featured: false,
     description:
       'What a better way to learn how to implement dark mode, then to build all new app for that.',
     ghLink: 'https://github.com/elia-dot/countries',
@@ -78,10 +78,12 @@ export const projects = [
   {
     id: 8,
     name: 'expense-tracker',
-    techs: ['NodeJS', 'MongoDB', 'express', 'React'],
-    featured: false,
-    description: 'App i built for me and my wife to track our monthly expenses',
-    ghLink: 'https://github.com/elia-dot/expense-tracker-server',
-    webLink: 'https://condescending-goldberg-e37646.netlify.app/',
+    photo: '/images/expense_app.png',
+    techs: ['nestJS', 'TypeScript', 'Flutter'],
+    featured: true,
+    description:
+      'App i built for me and my wife to track our monthly expenses, categorise them, set monthly budget and more.',
+    ghLink: 'https://github.com/elia-dot/expenses-nest',
+    webLink: 'https://github.com/elia-dot/expense-tracker-app',
   },
 ];

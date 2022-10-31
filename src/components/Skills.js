@@ -12,6 +12,7 @@ import {
 } from 'react-icons/si';
 import { GrGraphQl } from 'react-icons/gr';
 import { DiMsqlServer, DiMongodb } from 'react-icons/di';
+import { FaAngular } from 'react-icons/fa';
 
 const SkillsContainer = styled.div``;
 
@@ -144,6 +145,10 @@ const Skills = () => {
             <SiNodeDotJs />
             <SkillText>NodeJS</SkillText>
           </GreenBox>
+          <GreenBox>
+            <DiMongodb />
+            <SkillText>MongoDB</SkillText>
+          </GreenBox>
         </Row>
         <Row>
           <OrangeBox>
@@ -158,13 +163,14 @@ const Skills = () => {
             <DiMsqlServer />
             <SkillText>SQL</SkillText>
           </OrangeBox>
-          <OrangeBox>
-            <DiMongodb />
-            <SkillText>MongoDB</SkillText>
-          </OrangeBox>
+
           <OrangeBox>
             <SiTypescript />
             <SkillText>TypeScript</SkillText>
+          </OrangeBox>
+          <OrangeBox>
+            <FaAngular />
+            <SkillText>Angular</SkillText>
           </OrangeBox>
         </Row>
       </SkillsListContainer>
