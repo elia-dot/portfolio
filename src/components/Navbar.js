@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
 import { AiOutlineMenuFold } from 'react-icons/ai';
@@ -7,7 +7,6 @@ import { slideInRight } from 'react-animations';
 
 import { navbarLinks } from '../data/nav-data';
 import useWidth from '../hooks/useWidth';
-import Loader from './Loader';
 
 const Nav = styled.div`
   display: flex;
@@ -36,8 +35,8 @@ const LinkText = styled(Link)`
   text-decoration: none;
   transition: all 0.2s linear;
   &:hover {
-    border-bottom: 3.5px solid #64ffda;
-    color: #64ffda;
+    border-bottom: 3.5px solid ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
   }
 `;
 const MenuWraper = styled.div`
@@ -58,24 +57,12 @@ const NavMobile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #112240;
+  background: ${({ theme }) => theme.colors.primary};
   animation: 0.6s ${slideAnimation};
-`;
-
-const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
 `;
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [isFirstTime, setIsFirstTime] = useState(false);
-  const [finishedAnimation, setFinishedAnimation] = useState(false);
 
   const { width } = useWidth();
 
@@ -83,20 +70,8 @@ const Navbar = () => {
     setOpen(!open);
   };
 
-  useEffect(() => {
-    const visited = sessionStorage.getItem('visited');
-    if (!visited) {
-      setIsFirstTime(true);
-      sessionStorage.setItem('visited', true);
-    }
-  }, []);
   return (
     <Nav>
-      {isFirstTime && !finishedAnimation && (
-        <Overlay>
-          <Loader setFinishedAnimation = {setFinishedAnimation}/>
-        </Overlay>
-      )}
       <Link to="/">
         <Logo src="./images/logo.svg" alt="logo" />
       </Link>

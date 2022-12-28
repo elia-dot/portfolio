@@ -1,14 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import styled from "styled-components";
-import "animate.css/animate.min.css";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
+import 'animate.css/animate.min.css';
+import { ThemeProvider } from 'styled-components';
 
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar";
-import { GlobalStyles } from "./components/GlobalStyles";
-import Footer from "./components/Footer";
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
+import { GlobalStyles } from './components/GlobalStyles';
+import Footer from './components/Footer';
+import { theme } from './styled.theme';
 
 const Main = styled.section`
   padding: 2em;
@@ -23,18 +25,20 @@ const Main = styled.section`
 
 function App() {
   return (
-    <Router>
-      <Main>
-        <GlobalStyles />
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
-      </Main>
-      <Footer />
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Main>
+          <GlobalStyles />
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
+        </Main>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

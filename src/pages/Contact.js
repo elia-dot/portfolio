@@ -22,7 +22,7 @@ const TextContainer = styled.div`
 `;
 const ContactTitle = styled.h1`
   font-size: 3em;
-  color: #64ffda;
+  color: ${({ theme }) => theme.colors.secondary};
   margin-top: 1em;
   margin-left: 0.2em;
 `;
@@ -75,8 +75,8 @@ const FormTextArea = styled.textarea`
 
 const SubmitInpot = styled.input`
   background: none;
-  border: 1px solid #64ffda;
-  color: #64ffda;
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.secondary};
   padding: 0.8em 2em;
   align-self: flex-end;
   margin: 2em 0.4em;
@@ -97,7 +97,7 @@ const IconContainer = styled.div`
 `;
 
 const IconWraper = styled.div`
-  border: 1px solid #64ffda;
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
   display: flex;
   align-items: center;
   border-radius: 50%;

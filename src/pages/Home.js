@@ -1,51 +1,86 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import ScrollAnimation from "react-animate-on-scroll";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { FiArrowDownCircle } from 'react-icons/fi';
 
-import { projects } from "../data/project-data";
-import FeaturedProject from "../components/FeaturedProject";
-import Skills from "../components/Skills";
+import { projects } from '../data/project-data';
+import FeaturedProject from '../components/FeaturedProject';
+import Skills from '../components/Skills';
+import ContactIcons from '../components/ContactIcons';
+import TypeAnimation from '../components/TypeAnimation';
 
-const HomeContainer = styled.section`
+const HomeContainer = styled.div`
   padding: 1em;
 `;
+
+const MainSection = styled.section`
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-evenly;
+`;
+
+const ArrowDown = styled('a')`
+  all: unset;
+  text-align: center;
+  cursor: pointer;
+  font-size: 50px;
+  transition: color 0.2s linear, font-size 0.2s linear;
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: 53px;
+  }
+`;
 const HomeTitle = styled.h1`
-  font-size: 3em;
+  font-size: 4vw;
   color: #cce2ff;
+  margin: 8px 0;
+
+  @media (max-width: 950px) {
+    font-size: 5vw;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 10vw;
+  }
 `;
 const HomeSubTitle = styled.h1`
-  font-size: 3em;
-  margin-bottom: 0.5em;
+  font-size: 3.5vw;
+  margin-bottom: 1em;
+
+  @media (max-width: 950px) {
+    font-size: 4.5vw;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 9vw;
+  }
 `;
 
-const HomeText = styled.p``;
+const HomeText = styled.p`
+  font-size: 1.5vw;
+  line-height: 2.2vw;
+
+  @media (max-width: 950px) {
+    font-size: 2.5vw;
+    line-height: 4.5vw;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 5vw;
+    line-height: 7.8vw;
+  }
+`;
 
 const SpacialText = styled.p`
-  color: #64ffda;
+  color: ${({ theme }) => theme.colors.secondary};
 `;
+
 
 const TitleContainer = styled.div`
-  width: 80%;
-  margin: 4em auto;
-  @media (max-width: 950px) {
-    width: 100%;
-  }
-`;
-
-const LinkButton = styled.button`
-  background: none;
-  border: 1px solid #64ffda;
-  color: #64ffda;
-  padding: 0.8em 2em;
-  align-self: flex-end;
-  margin-top: 2em;
-  cursor: pointer;
-  font-size: 1.1em;
-  text-decoration: none;
-  &:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
+  padding: 2em 0;
 `;
 
 const Container = styled.div`
@@ -83,37 +118,46 @@ const SubTitle = styled.h2`
 `;
 
 const SpanLink = styled(Link)`
-  color: #64ffda;
+  color: ${({ theme }) => theme.colors.secondary};
   font-size: 1.2em;
   text-decoration: none;
 `;
 
 const Home = () => {
-  const filteredProjects = projects.filter(
-    (project) => project.featured === true
-  );
+  const filteredProjects = projects.filter((project) => project.featured);
   return (
     <HomeContainer>
-      <TitleContainer>
-        <SpacialText>Hi, my name is</SpacialText>
-        <HomeTitle>Elia Cohen.</HomeTitle>
-        <HomeSubTitle>a father, husband and programer</HomeSubTitle>
-        <HomeText>
-          I'm a web developer, mostly focused on the front-end, using modern
-          technologies.
-        </HomeText>
-      </TitleContainer>
-      <Container>
-        <LinkButton as={Link} to="/contact">
-          Contact me
-        </LinkButton>
-      </Container>
-      <DivderContainer>
-        <Dot />
-        <Divider />
-        <Dot />
-      </DivderContainer>
-      <Container>
+      <MainSection>
+        <TitleContainer>
+          <SpacialText>Hi, my name is</SpacialText>
+          <HomeTitle>Elia Cohen.</HomeTitle>
+          <HomeSubTitle>
+            a father, husband and{' '}
+            <TypeAnimation
+              text={[
+                'front-end',
+                'back-end',
+                'full-stack',
+                'mobile',
+                'programmer',
+              ]}
+              speed={200}
+            />
+          </HomeSubTitle>
+          <HomeText>
+            Experienced in building web and cross platform applications, with
+            skills in front end and back end development. I can create visually
+            appealing interfaces and efficient server side functionality
+          </HomeText>
+        </TitleContainer>
+ 
+          <ContactIcons />
+        
+        <ArrowDown href="#projects">
+          <FiArrowDownCircle />
+        </ArrowDown>
+      </MainSection>
+      <Container id="projects">
         <SubTitle>Projects iv'e worked on recently :</SubTitle>
         {filteredProjects.map((project, i) => (
           <ScrollAnimation
@@ -126,7 +170,7 @@ const Home = () => {
           </ScrollAnimation>
         ))}
       </Container>
-      <Container style={{ textAlign: "center" }}>
+      <Container style={{ textAlign: 'center' }}>
         <SubTitle>Like what you see?</SubTitle>
         <HomeText>
           Click <SpanLink to="/projects">here</SpanLink> to see more of that
@@ -139,8 +183,8 @@ const Home = () => {
         <Dot />
       </DivderContainer>
       <Container>
-      <SubTitle>Languages And Technologies: </SubTitle>
-      <Skills/>
+        <SubTitle>Languages And Technologies: </SubTitle>
+        <Skills />
       </Container>
     </HomeContainer>
   );

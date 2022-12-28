@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { AiFillGithub } from "react-icons/ai";
-import { VscLinkExternal } from "react-icons/vsc";
-
+import React from 'react';
+import styled from 'styled-components';
+import { AiFillGithub } from 'react-icons/ai';
+import { VscLinkExternal } from 'react-icons/vsc';
 
 const ProjectContainer = styled.div`
   padding: 1em;
@@ -11,7 +10,7 @@ const ProjectContainer = styled.div`
   gap: 1em;
   margin-bottom: 2em;
   transition: all 1s;
-  box-shadow: 0px 0px 10px 0px #64ffda;
+  box-shadow: 0px 0px 10px 0px ${({ theme }) => theme.colors.secondary};
   @media (max-width: 950px) {
     flex-direction: column-reverse;
   }
@@ -37,8 +36,8 @@ const ProjectTitle = styled.h2`
 `;
 
 const ProjectDescription = styled.div`
-background: rgba(0,0,0,0.3);
-padding: 1em;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1em;
 `;
 
 const ProjectTech = styled.div`
@@ -69,11 +68,11 @@ const FeaturedProject = ({ project }) => {
         </ProjectTech>
         <ProjectLinks>
           <a href={ghLink} target="_blank" rel="noreferrer">
-            {" "}
+            {' '}
             <AiFillGithub />
           </a>
           <a href={webLink} target="_blank" rel="noreferrer">
-            {" "}
+            {' '}
             <VscLinkExternal />
           </a>
         </ProjectLinks>

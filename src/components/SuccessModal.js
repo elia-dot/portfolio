@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { GiCheckMark } from "react-icons/gi";
+import React from 'react';
+import styled from 'styled-components';
+import { GiCheckMark } from 'react-icons/gi';
 
 const ModalBg = styled.div`
   width: 100%;
@@ -21,15 +21,15 @@ const Modal = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1.5em
+  padding: 1.5em;
 `;
 
 const CheckMarkCircle = styled.div`
-  color: #64ffda;
+  color: ${({ theme }) => theme.colors.secondary};
   padding: 0.3em;
   font-size: 1.5em;
   border-radius: 50%;
-  border: 2px solid #64ffda;
+  border: 2px solid ${({ theme }) => theme.colors.secondary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,14 +38,14 @@ const CheckMarkCircle = styled.div`
 `;
 
 const Text = styled.p`
-  color: #64ffda;
+  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const SuccessModal = () => {
   return (
     <ModalBg>
       <Modal>
-        {" "}
+        {' '}
         <CheckMarkCircle>
           <GiCheckMark />
         </CheckMarkCircle>

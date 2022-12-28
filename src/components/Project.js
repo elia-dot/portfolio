@@ -5,7 +5,7 @@ import { VscLinkExternal } from "react-icons/vsc";
 
 const ProjectContainer = styled.div`
   min-height: 300px;
-  box-shadow: 0px 0px 10px 0px #64ffda;
+  box-shadow: 0px 0px 10px 0px ${({ theme }) => theme.colors.secondary};
   overflow: hidden;
 `;
 
