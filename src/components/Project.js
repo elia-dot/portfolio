@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { AiFillGithub } from "react-icons/ai";
-import { VscLinkExternal } from "react-icons/vsc";
+import React from 'react';
+import styled from 'styled-components';
+import { AiFillGithub } from 'react-icons/ai';
+import { VscLinkExternal } from 'react-icons/vsc';
 
 const ProjectContainer = styled.div`
   min-height: 300px;
@@ -43,7 +43,8 @@ const ProjectLinks = styled.div`
 `;
 
 const Project = ({ project }) => {
-  const { name, description, techs, ghLink, webLink } = project;
+  const { name, description, techs, ghLinks, webLinks } = project;
+  console.log(ghLinks);
   return (
     <ProjectContainer>
       <DescriptionContainer>
@@ -55,14 +56,18 @@ const Project = ({ project }) => {
           ))}
         </ProjectTech>
         <ProjectLinks>
-          <a href={ghLink} target="_blank" rel="noreferrer">
-            {" "}
-            <AiFillGithub />
-          </a>
-          <a href={webLink} target="_blank" rel="noreferrer">
-            {" "}
-            <VscLinkExternal />
-          </a>
+          {ghLinks.map((ghLink) => (
+            <a href={ghLink} target="_blank" rel="noreferrer" key={ghLink}>
+              {' '}
+              <AiFillGithub />
+            </a>
+          ))}
+          {webLinks.map((webLink) => (
+            <a href={webLink} target="_blank" rel="noreferrer" key={webLink}>
+              {' '}
+              <VscLinkExternal />
+            </a>
+          ))}
         </ProjectLinks>
       </DescriptionContainer>
     </ProjectContainer>

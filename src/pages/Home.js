@@ -1,38 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { FiArrowDownCircle } from 'react-icons/fi';
 
 import { projects } from '../data/project-data';
-import FeaturedProject from '../components/FeaturedProject';
 import Skills from '../components/Skills';
 import ContactIcons from '../components/ContactIcons';
 import TypeAnimation from '../components/TypeAnimation';
+import { ArrowDown } from '../components/ArrowDown';
+import FeatureProjectsSection from '../components/FeatureProjectsSection';
+import Divider from '../components/Divider';
 
 const HomeContainer = styled.div`
   padding: 1em;
 `;
 
 const MainSection = styled.section`
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
+  gap: 32px;
   position: relative;
   justify-content: space-evenly;
 `;
 
-const ArrowDown = styled('a')`
-  all: unset;
-  text-align: center;
-  cursor: pointer;
-  font-size: 50px;
-  transition: color 0.2s linear, font-size 0.2s linear;
-  &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
-    font-size: 53px;
-  }
-`;
 const HomeTitle = styled.h1`
   font-size: 4vw;
   color: #cce2ff;
@@ -78,38 +69,22 @@ const SpacialText = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
 `;
 
-
 const TitleContainer = styled.div`
   padding: 2em 0;
 `;
 
-const Container = styled.div`
-  width: 80%;
-  margin: 3em auto;
-  @media (max-width: 950px) {
-    width: 100%;
+const NextSection = styled.div`
+  margin-inline: auto;
+  text-align: center;
+
+  h2 {
+    margin: 8px 0;
+    color: #cce2ff;
+    font-size: 1em;
   }
 `;
 
-const DivderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 40%;
-  margin: 2em auto;
-`;
 
-const Divider = styled.div`
-  height: 3px;
-  background-color: #004db3;
-  width: 90%;
-`;
-const Dot = styled.div`
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  background-color: #004db3;
-`;
 
 const SubTitle = styled.h2`
   color: #cce2ff;
@@ -125,6 +100,7 @@ const SpanLink = styled(Link)`
 
 const Home = () => {
   const filteredProjects = projects.filter((project) => project.featured);
+
   return (
     <HomeContainer>
       <MainSection>
@@ -145,47 +121,34 @@ const Home = () => {
             />
           </HomeSubTitle>
           <HomeText>
-            Experienced in building web and cross platform applications, with
-            skills in front end and back end development. I can create visually
-            appealing interfaces and efficient server side functionality
+            Experienced in building web and cross platform applications. I can
+            create visually appealing interfaces and efficient server side
+            functionality
           </HomeText>
         </TitleContainer>
- 
-          <ContactIcons />
-        
-        <ArrowDown href="#projects">
-          <FiArrowDownCircle />
-        </ArrowDown>
+        <ContactIcons />
+        <NextSection>
+          <SubTitle>Click to see some of my latest projects</SubTitle>
+          <ArrowDown href="#projects">
+            <FiArrowDownCircle />
+          </ArrowDown>
+        </NextSection>
       </MainSection>
-      <Container id="projects">
-        <SubTitle>Projects iv'e worked on recently :</SubTitle>
-        {filteredProjects.map((project, i) => (
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOut="animate__fadeOut"
-            key={i}
-            duration={0.7}
-          >
-            <FeaturedProject project={project} />
-          </ScrollAnimation>
-        ))}
-      </Container>
-      <Container style={{ textAlign: 'center' }}>
+      <div id="projects">
+        <FeatureProjectsSection projects={filteredProjects} />
+      </div>
+      <div style={{ textAlign: 'center' }} id={filteredProjects.length}>
         <SubTitle>Like what you see?</SubTitle>
         <HomeText>
           Click <SpanLink to="/projects">here</SpanLink> to see more of that
           stuff
         </HomeText>
-      </Container>
-      <DivderContainer>
-        <Dot />
-        <Divider />
-        <Dot />
-      </DivderContainer>
-      <Container>
+      </div>
+     <Divider/>
+      <div>
         <SubTitle>Languages And Technologies: </SubTitle>
         <Skills />
-      </Container>
+      </div>
     </HomeContainer>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RiHtml5Line } from 'react-icons/ri';
 import {
   SiCss3,
   SiJavascript,
@@ -11,7 +10,7 @@ import {
   SiFlutter,
 } from 'react-icons/si';
 import { GrGraphQl } from 'react-icons/gr';
-import { DiMsqlServer, DiMongodb } from 'react-icons/di';
+import { DiMsqlServer } from 'react-icons/di';
 import { FaAngular } from 'react-icons/fa';
 
 const SkillsContainer = styled.div``;
@@ -56,9 +55,9 @@ const Row = styled.div`
 const GreenBox = styled.div`
   background: rgba(0, 0, 0, 0.5);
   padding: 0.3em;
-  width: 130px;
-  height: 120px;
-  font-size: 3em;
+  width: 100px;
+  height: 90px;
+  font-size: 2.5em;
   color: #cce2ff;
   position: relative;
   border-radius: 0.1em;
@@ -80,9 +79,9 @@ const GreenBox = styled.div`
 const OrangeBox = styled.div`
   background: rgba(0, 0, 0, 0.5);
   padding: 0.3em;
-  width: 130px;
-  height: 120px;
-  font-size: 3em;
+  width: 100px;
+  height: 90px;
+  font-size: 2.5em;
   color: #cce2ff;
   position: relative;
   border-radius: 0.1em;
@@ -122,16 +121,16 @@ const Skills = () => {
       <SkillsListContainer>
         <Row>
           <GreenBox>
-            <RiHtml5Line />
-            <SkillText>HTML</SkillText>
-          </GreenBox>
-          <GreenBox>
             <SiCss3 />
             <SkillText>CSS</SkillText>
           </GreenBox>
           <GreenBox>
             <SiJavascript />
             <SkillText>JS</SkillText>
+          </GreenBox>
+          <GreenBox>
+            <SiTypescript />
+            <SkillText>TS</SkillText>
           </GreenBox>
           <GreenBox>
             <SiReact />
@@ -143,11 +142,7 @@ const Skills = () => {
           </GreenBox>
           <GreenBox>
             <SiNodeDotJs />
-            <SkillText>NodeJS</SkillText>
-          </GreenBox>
-          <GreenBox>
-            <DiMongodb />
-            <SkillText>MongoDB</SkillText>
+            <SkillText>Node</SkillText>
           </GreenBox>
         </Row>
         <Row>
@@ -164,10 +159,6 @@ const Skills = () => {
             <SkillText>SQL</SkillText>
           </OrangeBox>
 
-          <OrangeBox>
-            <SiTypescript />
-            <SkillText>TypeScript</SkillText>
-          </OrangeBox>
           <OrangeBox>
             <FaAngular />
             <SkillText>Angular</SkillText>

@@ -6,9 +6,13 @@ export const projects = [
     techs: ['React-native', 'NodeJS', 'MongoDB', 'i18n'],
     featured: true,
     description:
-      'Virtual banking and chore managments app for kids. the app is designed to help kids and their parents track allowance, chores, and other financial transactions ',
-    ghLink: 'https://github.com/elia-dot/savings-client',
-    webLink: 'https://github.com/elia-dot/savings-backend',
+      'This app is designed to help kids and their parents track allowance, chores, and other financial transactions. With easy-to-use interface, kids can see how much allowance they have earned, what chores they need to complete, and what they can spend their money on.',
+    ghLinks: [
+      'https://github.com/elia-dot/savings-client',
+      'https://github.com/elia-dot/savings-backend',
+    ],
+    webLinks: [],
+    type: 'mobile',
   },
   {
     id: 2,
@@ -18,8 +22,9 @@ export const projects = [
     featured: true,
     description:
       "Ever had a cool moment in a game, no one saw that, and you want everyone will see it? I'm sure you do. With this app you can. Just create an account, upload your videos, and show the world what you've made of! ",
-    ghLink: 'https://github.com/elia-dot/moments',
-    webLink: 'https://moments-052.herokuapp.com/',
+    ghLinks: ['https://github.com/elia-dot/moments'],
+    webLinks: ['https://moments-052.herokuapp.com/'],
+    type: 'web',
   },
   {
     id: 3,
@@ -29,8 +34,9 @@ export const projects = [
     featured: true,
     description:
       'A complete api built with nodeJS, espress and mongoDB, payments with stripe api, and server side rendered website using pug (currently not responsive).',
-    ghLink: 'https://github.com/elia-dot/natours',
-    webLink: 'https://natours-c5f4.onrender.com/',
+    ghLinks: ['https://github.com/elia-dot/natours'],
+    webLinks: ['https://natours-c5f4.onrender.com/'],
+    type: 'web',
   },
   {
     id: 4,
@@ -40,8 +46,9 @@ export const projects = [
     featured: false,
     description:
       'What a better way to learn how to implement dark mode, then to build all new app for that.',
-    ghLink: 'https://github.com/elia-dot/countries',
-    webLink: 'https://all-countries-api.netlify.app/',
+    ghLinks: ['https://github.com/elia-dot/countries'],
+    webLinks: ['https://all-countries-api.netlify.app/'],
+    type: 'web',
   },
   {
     id: 5,
@@ -51,8 +58,9 @@ export const projects = [
     featured: false,
     description:
       'As a child a spent hours on this game, so why not creating one for myself?',
-    ghLink: 'https://github.com/elia-dot/snake',
-    webLink: 'https://snake-opbtiymia.vercel.app/',
+    ghLinks: ['https://github.com/elia-dot/snake'],
+    webLinks: ['https://snake-opbtiymia.vercel.app/'],
+    type: 'web',
   },
   {
     id: 6,
@@ -62,8 +70,9 @@ export const projects = [
     featured: false,
     description:
       'Small app to track a location based on IP address, with exact location on the map',
-    ghLink: 'https://github.com/elia-dot/IPtracker',
-    webLink: 'https://ip-tracker-8w6cfuzss-elia-dot.vercel.app/',
+    ghLinks: ['https://github.com/elia-dot/IPtracker'],
+    webLinks: ['https://ip-tracker-8w6cfuzss-elia-dot.vercel.app/'],
+    type: 'web',
   },
   {
     id: 7,
@@ -72,8 +81,9 @@ export const projects = [
     techs: ['React', 'Bootstrap-react'],
     featured: false,
     description: `A small "shop" with all the functionality, including cart and liked prudacts.`,
-    ghLink: 'https://github.com/elia-dot/mac-shop',
-    webLink: 'https://mac-shop.netlify.app/',
+    ghLinks: ['https://github.com/elia-dot/mac-shop'],
+    webLinks: ['https://mac-shop.netlify.app/'],
+    type: 'web',
   },
   {
     id: 8,
@@ -83,7 +93,11 @@ export const projects = [
     featured: true,
     description:
       'App i built for me and my wife to track our monthly expenses, categorise them, set monthly budget and more. available on Apple ang Google stores.',
-    ghLink: 'https://github.com/elia-dot/expenses-nest',
-    webLink: 'https://github.com/elia-dot/expense-tracker-app',
+    ghLinks: [
+      'https://github.com/elia-dot/expenses-nest',
+      'https://github.com/elia-dot/expense-tracker-app',
+    ],
+    webLinks: [],
+    type: 'mobile',
   },
 ];
