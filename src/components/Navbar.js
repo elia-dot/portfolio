@@ -58,6 +58,7 @@ const NavMobile = styled.div`
   flex-direction: column;
   align-items: center;
   background: ${({ theme }) => theme.colors.primary};
+  z-index: 1000;
   animation: 0.6s ${slideAnimation};
 `;
 
